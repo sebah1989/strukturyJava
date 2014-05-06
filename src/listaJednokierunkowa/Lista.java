@@ -36,6 +36,15 @@ public class Lista {
 	    info.getTail().setElement(element);
 	    info.setTail(element);
 	  }
+	  else{
+	    Element temp = info.getHead();
+	    while(temp.getElement() != null && temp.getElement().getValue() < element.getValue()){
+	      temp = temp.getElement();
+	    }
+	    Element nextTemp = temp.getElement();
+	    temp.setElement(element);
+	    element.setElement(nextTemp);
+	  }
 	}
 	
 	boolean pusta(){
