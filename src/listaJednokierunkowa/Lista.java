@@ -21,6 +21,12 @@ public class Lista {
 			
 		info.setTail(element);
 	}
+	public void addElementSorted(Element element){
+	  if(pusta()){
+	    info.setHead(element);
+	    info.setTail(element);
+	  }
+	}
 	
 	boolean pusta(){
 		if(info.getHead() == null){
